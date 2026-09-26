@@ -2,7 +2,7 @@
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Great+Vibes&family=Manrope:wght@300;400;500;600;700&display=swap">
 <style>
 :root{
   color-scheme: light;
@@ -119,8 +119,47 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:.005em}
 .loop{background:rgba(255,255,255,.85)}
 .sign{color:var(--ruby);font-family:var(--italic);font-style:italic;font-size:20px;font-weight:500}
 .task h3{font-size:24px}
+
+/* Черный жемчуг: графит, шампанское золото, рубин */
+:root{color-scheme:dark;--bg:#141210;--panel:#211d19;--line:rgba(228,192,124,.2);--gold:#e4c07c;--gold-soft:#f0d49a;--ink:#f4ede1;--muted:#b5a992;--accent:#e4c07c;--ruby:#c8182f;--btn-hover:#9b0f22;--tint:rgba(228,192,124,.12);--script:"Great Vibes",cursive}
+body{background:radial-gradient(60% 40% at 50% 0%,rgba(212,168,92,.2),transparent 70%),radial-gradient(60% 40% at 0% 100%,rgba(212,168,92,.08),transparent 70%),var(--bg);background-attachment:fixed;color:var(--ink)}
+.eyebrow{color:var(--gold);font-weight:600;letter-spacing:.26em}
+h1,h2,h3{color:var(--ink)}
+.goldtxt,.intro h1 em,.hl{background:linear-gradient(180deg,#fbeac0,#e8c47f 45%,#c1914a 75%,#f0d49a)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;font-family:var(--script)!important;font-style:normal!important;font-weight:400!important;text-transform:none;font-size:1.28em;line-height:1;padding:0 .05em}
+.intro h1{font-size:clamp(32px,8.5vw,44px);line-height:1.1}
+.coin{background:radial-gradient(circle at 35% 30%,#fff3cf,#e6bd6c 42%,#b0802f 78%,#7a531a);box-shadow:0 0 50px 8px rgba(228,192,124,.35),inset 0 0 0 5px rgba(122,83,26,.35),inset 0 0 0 9px rgba(255,236,190,.35)}
+.coin span{color:#5e3f10;font-family:var(--serif);font-style:normal;font-weight:700;font-size:50px;text-shadow:0 1px 0 rgba(255,240,200,.6)}
+.intro p,.meta{color:var(--muted)}
+.meta b{color:var(--gold)}
+.btn{background:linear-gradient(180deg,#e0263d,var(--ruby) 55%,var(--btn-hover));border:1px solid rgba(255,140,150,.35);border-radius:18px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:15px;box-shadow:0 14px 36px rgba(200,24,47,.38),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn:hover{filter:brightness(1.08);background:linear-gradient(180deg,#e0263d,var(--ruby) 55%,var(--btn-hover))}
+#ch{background:linear-gradient(180deg,#e0263d,var(--ruby) 55%,var(--btn-hover));color:#fff;border:1px solid rgba(255,140,150,.35);box-shadow:0 14px 36px rgba(200,24,47,.38),inset 0 1px 0 rgba(255,255,255,.25)}
+#ch:hover{filter:brightness(1.08);background:linear-gradient(180deg,#e0263d,var(--ruby) 55%,var(--btn-hover))}
+.top{color:var(--muted)}
+.bar{background:rgba(228,192,124,.15)}
+.bar i{background:linear-gradient(90deg,#c1914a,#f0d49a)}
+.opt{background:var(--panel);border-color:var(--line);color:var(--ink);box-shadow:none}
+.opt:hover{border-color:var(--gold);background:#27221d}
+.opt.picked{background:rgba(228,192,124,.16);border-color:var(--gold);color:var(--ink)}
+.link{color:var(--muted)}
+.res .name{color:transparent;background:linear-gradient(180deg,#fbeac0,#e8c47f 45%,#c1914a 75%,#f0d49a);-webkit-background-clip:text;background-clip:text}
+.res .voice{color:var(--gold-soft);border-left:2px solid var(--gold)}
+.res p{color:var(--muted)}
+.res p b{color:var(--ink)}
+.step{background:var(--panel);border-color:var(--line);color:var(--muted)}
+.step b{color:var(--muted)}
+.step.me{background:linear-gradient(180deg,#e0263d,#9b0f22);border-color:#e0263d;color:#fff;box-shadow:0 0 26px rgba(200,24,47,.45)}
+.step.me b,.step.me em{color:#fff}
+.step.next{background:rgba(228,192,124,.08);border-color:var(--gold);color:var(--ink)}
+.step.next em{color:var(--gold)}
+.loop{background:var(--panel);border-color:rgba(228,192,124,.32)}
+.loop p{color:var(--ink)}
+.task{border-top-color:var(--line)}
+.task h3{color:var(--gold)}
+.sign{color:var(--gold);font-family:var(--script);font-style:normal;font-size:30px}
 </style>
 </head><body>
+
 
 <!-- ССЫЛКА НА КАНАЛ: менять здесь -->
 <canvas id="sparks" aria-hidden="true"></canvas>
@@ -130,7 +169,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:.005em}
 (function(){
 var CHANNEL=document.getElementById('app').getAttribute('data-channel');
 var tg=(window.Telegram&&window.Telegram.WebApp&&window.Telegram.WebApp.initData)?window.Telegram.WebApp:null;
-if(tg){try{tg.ready();tg.expand();tg.setHeaderColor('#fbf8f2');tg.setBackgroundColor('#fbf8f2');}catch(e){}}
+if(tg){try{tg.ready();tg.expand();tg.setHeaderColor('#141210');tg.setBackgroundColor('#141210');}catch(e){}}
 
 // цифра = уровень: 1 яма, 2 безопасность, 3 стабильность, 4 независимость, 5 свобода
 var Q=[
@@ -312,9 +351,10 @@ function result(){
 intro();
 })();
 (function(){var c=document.getElementById('sparks');if(!c)return;var x=c.getContext('2d');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;var W,H,S=[];
-function sz(){var d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);S=[];for(var i=0;i<45;i++)S.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,p:Math.random()*6.28,s:.01+Math.random()*.025,c:['#c2263f','#1f7a5c','#ffffff'][i%3]});}
+function sz(){var d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);S=[];for(var i=0;i<45;i++)S.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,p:Math.random()*6.28,s:.01+Math.random()*.025,c:['#f3d596','#e4c07c','#fff4d6'][i%3]});}
 sz();addEventListener('resize',sz);var t=0;
 function f(){t++;x.clearRect(0,0,W,H);S.forEach(function(s){x.globalAlpha=.25+.6*Math.abs(Math.sin(s.p+t*s.s));x.fillStyle=s.c;x.beginPath();x.arc(s.x,s.y,s.r,0,6.28);x.fill();if(s.r>1.8){x.strokeStyle=s.c;x.lineWidth=.8;x.beginPath();x.moveTo(s.x-6,s.y);x.lineTo(s.x+6,s.y);x.moveTo(s.x,s.y-6);x.lineTo(s.x,s.y+6);x.stroke();}});x.globalAlpha=1;if(!reduce)requestAnimationFrame(f);}f();})();
 
 </script>
+
 </body></html>
