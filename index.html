@@ -157,6 +157,18 @@ h1,h2,h3{color:var(--ink)}
 .task{border-top-color:var(--line)}
 .task h3{color:var(--gold)}
 .sign{color:var(--gold);font-family:var(--script);font-style:normal;font-size:30px}
+
+/* Бордо и жемчуг */
+html{background:#1c040b}
+:root{--bg:#240610;--panel:rgba(255,236,224,.05);--line:rgba(236,211,168,.22);--gold:#ecd3a8;--gold-soft:#f4e3c4;--ink:#f8f0e7;--muted:#d3b9b0;--ruby:#8a2338;--btn-hover:#6d1a2c}
+body{background:radial-gradient(60% 40% at 100% 0%,rgba(138,35,56,.55),transparent 70%),radial-gradient(50% 40% at 0% 100%,rgba(109,26,44,.5),transparent 70%),linear-gradient(180deg,#2a0712,#1c040b);background-attachment:fixed}
+.btn,#ch{background:linear-gradient(180deg,#fff6e8,#ecd3a8 55%,#d2ad76)!important;color:#3b0a16!important;border:0!important;border-radius:999px!important;box-shadow:0 12px 30px rgba(0,0,0,.35),0 0 0 6px rgba(236,211,168,.14),inset 0 1px 0 rgba(255,255,255,.8)!important}
+.btn:hover,#ch:hover{filter:brightness(1.05)}
+.opt{background:rgba(255,236,224,.05)}
+.opt:hover{background:rgba(255,236,224,.09)}
+.step.me{background:linear-gradient(160deg,#a02a42,#6d1a2c)!important;border-color:rgba(236,211,168,.6)!important;box-shadow:0 0 26px rgba(138,35,56,.6)!important}
+.coin{background:radial-gradient(circle at 35% 30%,#ffffff 0%,#f6ece2 35%,#d9c7b8 75%,#b9a597 100%);box-shadow:0 0 50px 10px rgba(255,240,225,.28),inset 0 0 0 5px rgba(185,165,151,.35)}
+.coin span{color:#6d1a2c;text-shadow:none}
 </style>
 </head><body>
 
@@ -169,7 +181,7 @@ h1,h2,h3{color:var(--ink)}
 (function(){
 var CHANNEL=document.getElementById('app').getAttribute('data-channel');
 var tg=(window.Telegram&&window.Telegram.WebApp&&window.Telegram.WebApp.initData)?window.Telegram.WebApp:null;
-if(tg){try{tg.ready();tg.expand();tg.setHeaderColor('#141210');tg.setBackgroundColor('#141210');}catch(e){}}
+if(tg){try{tg.ready();tg.expand();tg.setHeaderColor('#240610');tg.setBackgroundColor('#240610');}catch(e){}}
 
 // цифра = уровень: 1 яма, 2 безопасность, 3 стабильность, 4 независимость, 5 свобода
 var Q=[
@@ -351,7 +363,7 @@ function result(){
 intro();
 })();
 (function(){var c=document.getElementById('sparks');if(!c)return;var x=c.getContext('2d');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;var W,H,S=[];
-function sz(){var d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);S=[];for(var i=0;i<45;i++)S.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,p:Math.random()*6.28,s:.01+Math.random()*.025,c:['#f3d596','#e4c07c','#fff4d6'][i%3]});}
+function sz(){var d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);S=[];for(var i=0;i<45;i++)S.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,p:Math.random()*6.28,s:.01+Math.random()*.025,c:['#fbefe2','#ecd3a8','#ffffff'][i%3]});}
 sz();addEventListener('resize',sz);var t=0;
 function f(){t++;x.clearRect(0,0,W,H);S.forEach(function(s){x.globalAlpha=.25+.6*Math.abs(Math.sin(s.p+t*s.s));x.fillStyle=s.c;x.beginPath();x.arc(s.x,s.y,s.r,0,6.28);x.fill();if(s.r>1.8){x.strokeStyle=s.c;x.lineWidth=.8;x.beginPath();x.moveTo(s.x-6,s.y);x.lineTo(s.x+6,s.y);x.moveTo(s.x,s.y-6);x.lineTo(s.x,s.y+6);x.stroke();}});x.globalAlpha=1;if(!reduce)requestAnimationFrame(f);}f();})();
 
