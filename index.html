@@ -384,7 +384,7 @@ function result(){
  '<p class="voice">'+esc(r.voice)+'</p>'+ lad +
  '<p>'+esc(r.text[0])+'</p>'+
  '<div class="task"><h3>Задание от меня</h3><p>'+esc(taskTxt)+'</p></div>'+
- '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp +'<p class="again-note">В конце марафона вы пройдете этот тест снова и увидите, как изменился ваш уровень.</p>'+'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">Что делать с вашим уровнем&nbsp;→</a>'+'<p class="under">В канале разбор каждого из пяти уровней, практики и денежный марафон, который стартует 7 октября</p></div>'+
+ '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp +'<p class="again-note">В конце марафона вы пройдете этот тест снова и увидите, как изменился ваш уровень.</p>'+'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">Что делать с вашим уровнем&nbsp;→</a>'+'<p class="under">В канале разбор каждого из пяти уровней, практики и денежный марафон, который стартует 10 октября</p></div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
  document.getElementById('ch').onclick=function(e){if(tg){e.preventDefault();try{tg.openTelegramLink(CHANNEL);}catch(x){location.href=CHANNEL;}}};
