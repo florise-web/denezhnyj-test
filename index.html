@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20260928231246";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20260929094728";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -191,8 +191,6 @@ details.task[open] summary::after{transform:translateY(-50%) rotate(45deg)}
 details.task p{margin:0;padding:0 18px 18px}
 .task{border-top:0!important;padding-top:0!important}
 </style>
-</head><body>
-
 
 <!-- ССЫЛКА НА КАНАЛ: менять здесь -->
 <canvas id="sparks" aria-hidden="true"></canvas>
@@ -395,7 +393,7 @@ function result(){
  '<p class="voice">'+esc(r.voice)+'</p>'+ lad +
  '<p>'+esc(r.text[0])+'</p>'+(r.text[1]?'<p class="key">'+esc(r.text[1])+'</p>':'')+
  '<details class="task"><summary>Задание от меня</summary><p>'+esc(taskTxt)+'</p></details>'+
- '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp +'<p class="again-note">В конце марафона вы пройдете этот тест снова и увидите, как изменился ваш уровень.</p>'+'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">Что делать с вашим уровнем&nbsp;→</a>'+'<p class="under">В канале разбор каждого из пяти уровней, практики и денежный марафон, который стартует 10 октября</p></div>'+
+ '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp +'<p class="again-note">В конце практикума вы пройдете этот тест снова и увидите, как изменился ваш уровень.</p>'+'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">Что делать с вашим уровнем&nbsp;→</a>'+'<p class="under">В канале разбор каждого из пяти уровней, практики и денежный практикум, который стартует 19 октября</p></div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
  document.getElementById('ch').onclick=function(e){if(tg){e.preventDefault();try{tg.openTelegramLink(CHANNEL);}catch(x){location.href=CHANNEL;}}};
