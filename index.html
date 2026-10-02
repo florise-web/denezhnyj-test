@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20261002143340";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261002154837";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -392,7 +392,7 @@ function result(){
  var mskNow=new Date(Date.now()+(new Date().getTimezoneOffset()+180)*60000);
  var tdy=mskNow.getFullYear()+'-'+String(mskNow.getMonth()+1).padStart(2,'0')+'-'+String(mskNow.getDate()).padStart(2,'0');
  var END;
- if(tdy<='2026-10-09'){END={note:'<p class="again-note">Сделайте скрин результата. В канале сейчас идет Осенний марафон про деньги, и ваш уровень это задание первого дня: пришлите его в комментарии под заданием №1.</p>',btn:'В канал, на Осенний марафон&nbsp;→',under:'Бесплатно. Каждый день подкаст и задание: разбираем, почему деньги не приходят и что их блокирует',site:true};}
+ if(tdy<='2026-10-09'){END={note:'<p class="again-note">Сделайте скрин результата. В канале сейчас идет Осенний марафон про деньги, и ваш уровень это задание первого дня: пришлите его в комментарии под заданием №1.</p>',url:'https://t.me/peoplenewtning/4501',btn:'В канал, к первому дню марафона&nbsp;→',under:'Бесплатно. Каждый день подкаст и задание: разбираем, почему деньги не приходят и что их блокирует',site:true};}
  else if(tdy<'2026-10-18'||(tdy==='2026-10-18'&&mskNow.getHours()<21)){END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А. На практикуме в последний день пройдем тест снова и сравним.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней и Денежный практикум, старт 19 октября',site:true};}
  else{END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней, подкасты и практики',site:false};}
  app.innerHTML='<div class="res">'+
@@ -401,10 +401,10 @@ function result(){
  '<p class="voice">'+esc(r.voice)+'</p>'+ lad +
  '<p>'+esc(r.text[0])+'</p>'+(r.text[1]?'<p class="key">'+esc(r.text[1])+'</p>':'')+
  '<details class="task"><summary>Задание от меня</summary><p>'+esc(taskTxt)+'</p></details>'+
- '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
+ '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn" id="ch" href="'+(END.url||CHANNEL)+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
- document.getElementById('ch').onclick=function(e){if(tg){e.preventDefault();try{tg.openTelegramLink(CHANNEL);}catch(x){location.href=CHANNEL;}}};
+ document.getElementById('ch').onclick=function(e){var u=END.url||CHANNEL;if(tg){e.preventDefault();try{tg.openTelegramLink(u);}catch(x){location.href=u;}}};
  var st=document.getElementById('st');if(st)st.onclick=function(e){if(tg&&tg.openLink){e.preventDefault();try{tg.openLink(SITE);}catch(x){location.href=SITE;}}};
  document.getElementById('again').onclick=function(){orders=Q.map(function(){return shuffle(KEYS);});intro();};
  window.scrollTo(0,0);
