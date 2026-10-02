@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20260929094728";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261002143340";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,6 +181,7 @@ body{background:radial-gradient(60% 40% at 100% 0%,rgba(138,35,56,.55),transpare
 .loop .again-note{margin-top:12px;color:var(--muted);font-size:15px}
 .loop .btn{text-align:center;letter-spacing:.06em}
 .loop .under{margin-top:12px;font-size:14.5px;color:var(--ink);text-align:center}
+.loop .under a{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
 
 .res p.key{color:var(--ink);font-weight:600;font-size:17px;line-height:1.55;background:rgba(236,211,168,.1);border:1px solid rgba(236,211,168,.35);border-left:3px solid var(--gold);border-radius:14px;padding:14px 16px}
 details.task{border:1px solid rgba(236,211,168,.4);border-radius:16px;padding:0;background:rgba(255,236,224,.04)}
@@ -194,7 +195,7 @@ details.task p{margin:0;padding:0 18px 18px}
 
 <!-- ССЫЛКА НА КАНАЛ: менять здесь -->
 <canvas id="sparks" aria-hidden="true"></canvas>
-<div class="app" id="app" data-channel="https://t.me/+anS8bS40BH0xZjQy"></div>
+<div class="app" id="app" data-channel="https://t.me/peoplenewtning"></div>
 
 <script>
 (function(){
@@ -386,17 +387,25 @@ function result(){
    cmp='<p class="cmp">Первый замер '+d[2]+'.'+d[1]+': '+names[first.lv-1].toLowerCase()+'. '+(diff>0?'Вы поднялись на '+diff+' '+(diff===1?'ступень':'ступени')+'.':diff===0?'Уровень тот же. Посмотрите, какие ответы изменились.':'Уровень ниже, чем в первый раз. Честный замер тоже результат.')+'</p>';
  }
  sendStat(lv,first.lv,isRepeat);
- var taskTxt=lv<5?'Запишите на бумаге точку А и точку Б в цифрах: сколько вы зарабатываете сейчас и сколько хотите, уже за вычетом расходов. Реальная точка Б для мозга это рост примерно в три раза. Если сейчас вы зарабатываете 30 тысяч и ставите цель миллион, мозг просто отбросит ее как иллюзию и даже не начнет двигаться в эту сторону.':'Запишите, что для вас значит следующая ступень в жизни, если финансовая уже пройдена. Деньги здесь становятся инструментом, и интересно посмотреть, куда вы его направляете.';
+ var taskTxt=lv<5?'Запишите на бумаге точку А и точку Б в цифрах: сколько вы зарабатываете сейчас и сколько хотите, уже за вычетом расходов. Реальная точка Б для мозга это рост примерно в три раза. Если сейчас вы зарабатываете 30 тысяч и ставите цель миллион, мозг просто отбросит ее как иллюзию и даже не начнет двигаться в эту сторону. Это и есть задание №1 Осеннего марафона: когда сделаете, напишите в канале «выполнено».':'Запишите, что для вас значит следующая ступень в жизни, если финансовая уже пройдена. Деньги здесь становятся инструментом, и интересно посмотреть, куда вы его направляете.';
+ var SITE='https://florise-web.github.io/denezhnyj-marafon/';
+ var mskNow=new Date(Date.now()+(new Date().getTimezoneOffset()+180)*60000);
+ var tdy=mskNow.getFullYear()+'-'+String(mskNow.getMonth()+1).padStart(2,'0')+'-'+String(mskNow.getDate()).padStart(2,'0');
+ var END;
+ if(tdy<='2026-10-09'){END={note:'<p class="again-note">Сделайте скрин результата. В канале сейчас идет Осенний марафон про деньги, и ваш уровень это задание первого дня: пришлите его в комментарии под заданием №1.</p>',btn:'В канал, на Осенний марафон&nbsp;→',under:'Бесплатно. Каждый день подкаст и задание: разбираем, почему деньги не приходят и что их блокирует',site:true};}
+ else if(tdy<'2026-10-18'||(tdy==='2026-10-18'&&mskNow.getHours()<21)){END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А. На практикуме в последний день пройдем тест снова и сравним.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней и Денежный практикум, старт 19 октября',site:true};}
+ else{END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней, подкасты и практики',site:false};}
  app.innerHTML='<div class="res">'+
  '<div class="eyebrow">Ваш уровень сейчас</div>'+
  '<h1 class="name">'+r.name+'</h1>'+
  '<p class="voice">'+esc(r.voice)+'</p>'+ lad +
  '<p>'+esc(r.text[0])+'</p>'+(r.text[1]?'<p class="key">'+esc(r.text[1])+'</p>':'')+
  '<details class="task"><summary>Задание от меня</summary><p>'+esc(taskTxt)+'</p></details>'+
- '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp +'<p class="again-note">В конце практикума вы пройдете этот тест снова и увидите, как изменился ваш уровень.</p>'+'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">Что делать с вашим уровнем&nbsp;→</a>'+'<p class="under">В канале разбор каждого из пяти уровней, практики и денежный практикум, который стартует 19 октября</p></div>'+
+ '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn" id="ch" href="'+CHANNEL+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
  document.getElementById('ch').onclick=function(e){if(tg){e.preventDefault();try{tg.openTelegramLink(CHANNEL);}catch(x){location.href=CHANNEL;}}};
+ var st=document.getElementById('st');if(st)st.onclick=function(e){if(tg&&tg.openLink){e.preventDefault();try{tg.openLink(SITE);}catch(x){location.href=SITE;}}};
  document.getElementById('again').onclick=function(){orders=Q.map(function(){return shuffle(KEYS);});intro();};
  window.scrollTo(0,0);
 }
