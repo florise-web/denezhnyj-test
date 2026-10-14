@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20261010150000";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261014142000";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,6 +197,21 @@ details.task p{margin:0;padding:0 18px 18px}
 .weak-name{font-size:21px;line-height:1.25;margin:0 0 10px}
 .weak p{margin:0 0 10px}
 .weak p:last-child{margin-bottom:0}
+
+.numlist{margin:14px 0 0}
+.numlist .ni{display:grid;grid-template-columns:36px 1fr;gap:13px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.numlist .ni:first-child{border-top:0}
+.numlist .nn{font-weight:700;font-size:13px;line-height:32px;height:32px;text-align:center;color:var(--gold);background:var(--tint);border-radius:9px}
+.numlist .nt{font-size:15px;line-height:1.55;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.chip{font-weight:600;font-size:11px;letter-spacing:.09em;text-transform:uppercase;padding:9px 12px;border-radius:999px;background:var(--bg2);color:var(--muted)}
+.offer-box{margin-top:26px;padding:24px 20px;border-radius:20px;background:var(--panel);border:1px solid var(--gold);box-shadow:0 18px 40px -26px rgba(18,63,49,.45)}
+.offer-box .ob-cap{font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.offer-box h3{font-family:var(--serif);font-size:24px;line-height:1.18;margin:0 0 10px;color:var(--ink)}
+.offer-box p{font-size:15px;line-height:1.6;color:var(--ink);margin:0 0 10px}
+.dashed{margin:20px 0 0;padding:18px 16px;border:1px dashed var(--gold);border-radius:14px;text-align:center}
+.dashed b{display:block;font-size:17px;line-height:1.3;color:var(--ink);margin-bottom:6px}
+.dashed span{font-size:14px;line-height:1.55;color:var(--muted)}
 </style>
 
 <!-- ССЫЛКА НА КАНАЛ: менять здесь -->
@@ -391,6 +406,19 @@ function result(){
  '<p>'+esc(r.text[0])+'</p>'+(r.text[1]?'<p class="key">'+esc(r.text[1])+'</p>':'')+
  '<div class="weak"><div class="eyebrow">Что именно вас держит</div><h2 class="weak-name">'+esc(wk.name)+'</h2><p>'+esc(wk.text)+'</p><p class="key">Первый шаг: '+esc(wk.step)+'</p></div>'+'<details class="task"><summary>Задание от меня</summary><p>'+esc(taskTxt)+'</p></details>'+
  '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn" id="ch" href="'+(END.url||CHANNEL)+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
+ '<div class="offer-box">'+
+ '<div class="ob-cap">что с этим делать</div>'+
+ '<h3>Уровень не меняется от того, что вы его узнали</h3>'+
+ '<p>Он держится на привычке обращаться с деньгами так, как вы привыкли. На новой сумме сработает ровно то же самое.</p>'+
+ '<div class="numlist">'+
+ '<div class="ni"><div class="nn">01</div><div class="nt">Денежный практикум идет с 19 по 25 октября, семь дней подряд</div></div>'+
+ '<div class="ni"><div class="nn">02</div><div class="nt">Каждый день подкаст и одна техника, на задание 5 или 10 минут</div></div>'+
+ '<div class="ni"><div class="nn">03</div><div class="nt">Разбираем, что именно не дает деньгам задерживаться у вас</div></div>'+
+ '<div class="ni"><div class="nn">04</div><div class="nt">В последний день проходим этот тест снова и сравниваем с точкой А</div></div>'+
+ '</div>'+
+ '<div class="chips"><span class="chip">с 19 по 25 октября</span><span class="chip">7 дней</span><span class="chip">подкаст и техника в день</span><span class="chip">доступ остается</span></div>'+
+ '</div>'+
+ '<div class="dashed"><b>Сначала сделайте скрин результата</b><span>Это ваша точка А. Без нее сравнивать будет не с чем</span></div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
  document.getElementById('ch').onclick=function(e){var u=END.url||CHANNEL;if(tg){e.preventDefault();try{tg.openTelegramLink(u);}catch(x){location.href=u;}}};
