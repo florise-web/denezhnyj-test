@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20261014142000";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261021144500";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -305,8 +305,8 @@ var orders=Q.map(function(){return shuffle(KEYS);});
 var STATS_URL='https://script.google.com/macros/s/AKfycbwZNJxbmarbbimY87ydj2x7skVhUzYzqEWvVVOayOgqK8VfXeIUbkqqZsJRnyqN5cWu9g/exec';
 function uid(){var u=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user;if(u)return 'tg'+u.id;var k;try{k=localStorage.getItem('dm_uid');if(!k){k='w'+Math.random().toString(36).slice(2,10);localStorage.setItem('dm_uid',k);}}catch(e){k='w?';}return k;}
 function sendStat(lv,firstLv,rep,weak){if(!STATS_URL)return;try{var u=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user||{};
- var p={tab:'Денежный тест',name:(u.first_name||'')+(u.last_name?' '+u.last_name:''),telegram:u.username?'@'+u.username:'',
- request:'uid='+uid()+'; уровень='+lv+'; слабое='+(weak||'')+'; первый='+firstLv+'; замер='+(rep?'повтор':'первый')+'; источник='+(tg?'бот':'сайт')+'; ответы='+answers.join(''),consent:'тест'};
+ var p={tab:'Тесты',name:(u.first_name||'')+(u.last_name?' '+u.last_name:''),telegram:u.username?'@'+u.username:'',
+ request:'тест=Безопасность; uid='+uid()+'; уровень='+lv+'; слабое='+(weak||'')+'; первый='+firstLv+'; замер='+(rep?'повтор':'первый')+'; источник='+(tg?'бот':'сайт')+'; ответы='+answers.join(''),consent:'тест'};
  var q=Object.keys(p).map(function(k){return k+'='+encodeURIComponent(p[k]);}).join('&');
  fetch(STATS_URL+'?'+q,{mode:'no-cors'}).catch(function(){});}catch(e){}}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
