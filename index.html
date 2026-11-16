@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <script>window.flSrc=function(){var s="";try{var w=window.Telegram&&Telegram.WebApp;s=(w&&w.initDataUnsafe&&w.initDataUnsafe.start_param)||"";}catch(e){}if(!s){try{var p=new URLSearchParams(location.search);s=p.get("s")||p.get("startapp")||p.get("tgWebAppStartParam")||p.get("utm_source")||"";}catch(e){}}return s;};</script>
-<script>(function(){var V="20261027200000";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261116170000";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Уровень финансовой безопасности</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -394,49 +394,31 @@ function result(){
  sendStat(lv,first.lv,isRepeat,wk.key);
  var taskTxt=lv<5?'Запишите на бумаге точку А и точку Б в цифрах: сколько вы зарабатываете сейчас и сколько хотите, уже за вычетом расходов. Реальная точка Б для мозга это рост примерно в три раза. Если сейчас вы зарабатываете 30 тысяч и ставите цель миллион, мозг просто отбросит ее как иллюзию и даже не начнет двигаться в эту сторону. Сделайте это сегодня, пока результат теста свежий.':'Запишите, что для вас значит следующая ступень в жизни, если финансовая уже пройдена. Деньги здесь становятся инструментом, и интересно посмотреть, куда вы его направляете.';
  var SITE='https://florise-web.github.io/denezhnyj-marafon/';
+ var PRAK='https://florise-web.github.io/vetka-realnosti/metod/?utm_source=denezhnyj_test&utm_medium=test';
  var mskNow=new Date(Date.now()+(new Date().getTimezoneOffset()+180)*60000);
  var tdy=mskNow.getFullYear()+'-'+String(mskNow.getMonth()+1).padStart(2,'0')+'-'+String(mskNow.getDate()).padStart(2,'0');
- var DM='https://t.me/florise_irina?text='+encodeURIComponent('Здравствуйте! Прошла тест «Уровень финансовой безопасности», мой уровень: «'+r.name+'». Хочу получить практику и узнать про программу «ПЕРЕХОД».');
+ var DM='https://t.me/florise_irina?text='+encodeURIComponent('Здравствуйте! Прошла тест «Уровень финансовой безопасности», мой уровень: «'+r.name+'». Хочу узнать про практикум «Новая ветка реальности».');
  var END;
- if(tdy<='2026-10-09'){END={note:'<p class="again-note">Сделайте скрин результата. В канале сейчас идет Осенний марафон про деньги, и ваш уровень это задание первого дня: пришлите его в комментарии под заданием №1.</p>',url:'https://t.me/peoplenewtning/4501',btn:'В канал, к первому дню марафона&nbsp;→',under:'Бесплатно. Каждый день подкаст и задание: разбираем, почему деньги не приходят и что их блокирует',site:false};}
- else if(tdy<'2026-10-18'||(tdy==='2026-10-18'&&mskNow.getHours()<21)){END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А. На практикуме в последний день пройдем тест снова и сравним.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней и Денежный практикум, старт 19 октября',site:false};}
- else{END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А.</p>',btn:'Что делать с вашим уровнем&nbsp;→',under:'В канале разбор каждого из пяти уровней, подкасты и практики',site:false};}
+ if(tdy<='2026-10-09'){END={note:'<p class="again-note">Сделайте скрин результата. В канале сейчас идет Осенний марафон про деньги, и ваш уровень это задание первого дня: пришлите его в комментарии под заданием №1.</p>',url:PRAK,btn:'Что делать с вашим уровнем&nbsp;→',under:'Бесплатно. Каждый день подкаст и задание: разбираем, почему деньги не приходят и что их блокирует',site:false};}
+ else if(tdy<'2026-10-18'||(tdy==='2026-10-18'&&mskNow.getHours()<21)){END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А. На практикуме в последний день пройдем тест снова и сравним.</p>',url:'https://t.me/peoplenewtning/4502',btn:'Разбор уровней в канале&nbsp;→',under:'Бесплатно, в канале «Новые люди»',site:false};}
+ else{END={note:'<p class="again-note">Сделайте скрин результата, это ваша точка А.</p>',url:'https://t.me/peoplenewtning/4502',btn:'Разбор уровней в канале&nbsp;→',under:'Бесплатно, в канале «Новые люди»',site:false};}
  app.innerHTML='<div class="res">'+
  '<div class="eyebrow">Ваш уровень сейчас</div>'+
  '<h1 class="name">'+r.name+'</h1>'+
  '<p class="voice">'+esc(r.voice)+'</p>'+ lad +
  '<p>'+esc(r.text[0])+'</p>'+(r.text[1]?'<p class="key">'+esc(r.text[1])+'</p>':'')+
  '<div class="weak"><div class="eyebrow">Что именно вас держит</div><h2 class="weak-name">'+esc(wk.name)+'</h2><p>'+esc(wk.text)+'</p><p class="key">Первый шаг: '+esc(wk.step)+'</p></div>'+'<details class="task"><summary>Задание от меня</summary><p>'+esc(taskTxt)+'</p></details>'+
- '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn" id="ch" href="'+(END.url||CHANNEL)+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
- '<div class="offer-box">'+
- '<div class="ob-cap">подарок за тест</div>'+
- '<h3>Практика Ирины «Как выявить путь в новую ветку реальности»</h3>'+
- '<p>Семь минут с закрытыми глазами. Вы увидите себя на следующем уровне: чем вы заняты, кто рядом и какой шаг можно сделать уже сегодня.</p>'+
- '<p>Практика лежит в закрытом канале предзаписи, в открытом канале и в соцсетях ее нет. Ссылку на канал присылает команда Ирины в личке. Сообщение с вашим уровнем уже готово, останется отправить.</p>'+
- '<a class="btn" id="gift" href="'+DM+'" target="_blank" rel="noopener" style="margin-top:20px">Получить практику&nbsp;→</a>'+
- '<p class="under" style="text-align:center;margin-top:10px">Канал предзаписи открыт до старта 23 ноября</p>'+
- '</div>'+
- '<div class="offer-box">'+
- '<div class="ob-cap">что с этим делать</div>'+
- '<h3>Уровень не меняется от того, что вы его узнали</h3>'+
- '<p>Он держится на привычке обращаться с деньгами так, как вы привыкли. На новой сумме сработает ровно то же самое.</p>'+
- '<p>23 ноября Ирина начинает второй поток программы «ПЕРЕХОД: новое сознание». В ней семь ступеней, и шестая целиком про деньги: запреты из семьи, суммы, которые кажутся чужими, и как оставлять заработанное себе.</p>'+
- '<div class="numlist">'+
- '<div class="ni"><div class="nn">01</div><div class="nt">Живая группа с Ириной онлайн, ступени идут по одной</div></div>'+
- '<div class="ni"><div class="nn">02</div><div class="nt">На живых эфирах Ирина разбирает ситуации участниц</div></div>'+
- '<div class="ni"><div class="nn">03</div><div class="nt">Ирина отвечает лично на вашу ситуацию</div></div>'+
- '<div class="ni"><div class="nn">04</div><div class="nt">Все остается в записи</div></div>'+
- '</div>'+
- '<div class="chips"><span class="chip">старт 23 ноября</span><span class="chip">7 ступеней</span><span class="chip">живая группа</span><span class="chip">онлайн</span></div>'+
- '<a class="btn" id="dm" href="'+DM+'" target="_blank" rel="noopener" style="margin-top:20px">Узнать про «Переход»&nbsp;→</a>'+
- '<p class="under" style="text-align:center;margin-top:10px">Откроется личка команды Ирины. Сообщение уже готово, останется отправить</p>'+
- '</div>'+
- '<div class="dashed"><b>Сначала сделайте скрин результата</b><span>Это ваша точка А. Без нее сравнивать будет не с чем</span></div>'+
+ '<div class="loop"><p class="hook">'+esc(HOOK[lv])+'</p>'+ cmp + END.note +'<a class="btn irx-to-ch" id="ch" href="'+(END.url||CHANNEL)+'" target="_blank" rel="noopener">'+END.btn+'</a>'+'<p class="under">'+END.under+'</p>'+(END.site?'<p class="under"><a id="st" href="'+SITE+'" target="_blank" rel="noopener">Посмотреть программу практикума</a></p>':'')+'</div>'+
+ '<div id="irx"></div>'+
+'<div class="dashed"><b>Сначала сделайте скрин результата</b><span>Это ваша точка А. Без нее сравнивать будет не с чем</span></div>'+
  '<div class="sign">Ирина Гребенюкова</div>'+
  '<button class="link" id="again">Пройти еще раз</button></div>';
  function logClick(where){try{var u=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user||{};var p={tab:'Клики',name:(u.first_name||'')+(u.last_name?' '+u.last_name:''),telegram:u.username?'@'+u.username:'',request:'клик='+where+'; тест=Безопасность; результат='+r.name+'; uid='+uid()+'; источник='+(tg?'бот':'сайт')+(window.flSrc&&flSrc()?' / '+flSrc():''),consent:'клик'};var q=Object.keys(p).map(function(k){return k+'='+encodeURIComponent(p[k]);}).join('&');fetch(STATS_URL+'?'+q,{mode:'no-cors',keepalive:true}).catch(function(){});}catch(x){}}
- ['dm','gift'].forEach(function(id){document.getElementById(id).onclick=function(e){logClick('личка');if(tg){e.preventDefault();try{tg.openTelegramLink(DM);}catch(x){location.href=DM;}}};});
- document.getElementById('ch').onclick=function(e){logClick('канал');var u=END.url||CHANNEL;if(tg){e.preventDefault();try{tg.openTelegramLink(u);}catch(x){location.href=u;}}};
+ ['dm','gift'].forEach(function(id){var el=document.getElementById(id);if(el){el.href=PRAK;el.onclick=function(e){logClick('практикум');if(tg&&tg.openLink){e.preventDefault();try{tg.openLink(PRAK);}catch(x){location.href=PRAK;}}};}});
+ var LVM={1:{i:'🎙',t:'Долги и кредиты: что за этим стоит и как из этого выйти',id:4520},2:{i:'🎙',t:'Крайности в деньгах: почему вы не зарабатываете',id:4527},3:{i:'🎙',t:'Как вырасти в доходе: что блокирует финансовый рост',id:4536},4:{i:'🎙',t:'Как вырасти в доходе: что блокирует финансовый рост',id:4536},5:{i:'🎙',t:'Чем раскачать денежную энергию',id:4592}};
+ IRX.render(document.getElementById('irx'),{prak:PRAK,log:logClick,title:'«'+r.name+'» не ваш потолок. <em>Я знаю, как подняться выше</em>',
+  lead:'Уровень дохода держится не на количестве работы, а на мышлении. Можно работать больше и остаться на той же ступени. Я сама выходила из просадки и знаю, что именно переключает деньги на следующий уровень.',
+  mats:[{i:'🎙',t:'Стратегии мышления и уровни финансовой безопасности',id:4502},LVM[lv],{i:'📌',t:'Определяем свою точку А и точку Б',id:4504}]});
  var st=document.getElementById('st');if(st)st.onclick=function(e){if(tg&&tg.openLink){e.preventDefault();try{tg.openLink(SITE);}catch(x){location.href=SITE;}}};
  document.getElementById('again').onclick=function(){orders=Q.map(function(){return shuffle(KEYS);});intro();};
  window.scrollTo(0,0);
@@ -449,6 +431,105 @@ function sz(){var d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;c.widt
 sz();addEventListener('resize',sz);var t=0;
 function f(){t++;x.clearRect(0,0,W,H);S.forEach(function(s){x.globalAlpha=.25+.6*Math.abs(Math.sin(s.p+t*s.s));x.fillStyle=s.c;x.beginPath();x.arc(s.x,s.y,s.r,0,6.28);x.fill();if(s.r>1.8){x.strokeStyle=s.c;x.lineWidth=.8;x.beginPath();x.moveTo(s.x-6,s.y);x.lineTo(s.x+6,s.y);x.moveTo(s.x,s.y-6);x.lineTo(s.x,s.y+6);x.stroke();}});x.globalAlpha=1;if(!reduce)requestAnimationFrame(f);}f();})();
 
+</script>
+
+<!-- IRX: результат теста -> шаг 1 канал «Новые люди», шаг 2 видео в боте (там практикум). Общий для всех тестов -->
+<style id="irx-css">
+.irx{margin:30px 0 22px;font-family:inherit;text-align:left}
+.irx p,.irx h2,.irx ul,.irx li{font-family:inherit;text-transform:none;letter-spacing:normal;font-style:normal}
+.irx *{box-sizing:border-box}
+.irx-card{position:relative;overflow:hidden;border-radius:26px;padding:28px 22px 24px;color:#fff!important;background:radial-gradient(120% 80% at 100% 0%,#ff5f8f 0%,rgba(255,95,143,0) 55%),radial-gradient(100% 70% at 0% 100%,#7b3cff 0%,rgba(123,60,255,0) 60%),linear-gradient(160deg,#2b0f45 0%,#4a1257 55%,#2a0d3a 100%);box-shadow:0 22px 50px -18px rgba(90,20,110,.65)}
+.irx-card:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,214,120,.35),transparent 70%);pointer-events:none}
+.irx-card>*{position:relative}
+.irx-eb{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2b0f45!important;background:linear-gradient(90deg,#ffd978,#ffb35c);padding:6px 12px;border-radius:999px;margin-bottom:16px}
+.irx-h{font-size:clamp(25px,7vw,31px);line-height:1.13;font-weight:800;margin:0 0 14px;color:#fff!important;letter-spacing:-.01em;text-wrap:balance}
+.irx-h em{font-style:normal;background:linear-gradient(90deg,#ffe08a,#ff9fc0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.irx-p{font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.86)!important;margin:0 0 12px}
+.irx-q{margin:18px 0 6px;padding:16px 16px 16px 18px;border-left:3px solid #ffd978;background:rgba(255,255,255,.08);border-radius:0 16px 16px 0;font-size:16.5px;line-height:1.45;font-weight:600;color:#fff!important}
+.irx-sign{font-size:12.5px;color:rgba(255,255,255,.6)!important;margin:0 0 20px 21px}
+.irx-prod{background:#fff;color:#2b1433!important;border-radius:20px;padding:20px 18px 18px;box-shadow:0 10px 30px -12px rgba(0,0,0,.45)}
+.irx-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0306e!important}
+.irx-pn{font-size:22px;font-weight:800;line-height:1.15;margin:4px 0 14px;color:#2b1433!important}
+.irx-list{list-style:none;padding:0;margin:0 0 16px}
+.irx-list li{position:relative;padding:0 0 10px 30px;font-size:14.5px;line-height:1.45;color:#4a3550!important}
+.irx-list li:before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#ff5f8f,#7b3cff);color:#fff!important;font-size:11px;font-weight:800;line-height:20px;text-align:center}
+.irx-list b{color:#2b1433!important}
+.irx-price{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 14px}
+.irx-price s{font-size:17px;color:#9a8aa0!important}
+.irx-price b{font-size:32px;font-weight:800;color:#2b1433!important;line-height:1}
+.irx-off{font-size:12.5px;font-weight:800;color:#fff!important;background:#e2336f;padding:5px 9px;border-radius:999px}
+.irx-btn{display:block;width:100%;text-align:center;text-decoration:none;font-weight:800;font-size:16.5px;color:#2b0f45!important;padding:17px 14px;border-radius:16px;background:linear-gradient(90deg,#ffd978,#ffa95c);box-shadow:0 10px 24px -8px rgba(255,150,70,.75);animation:irxPulse 2.2s ease-in-out infinite}
+@keyframes irxPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.irx-small{font-size:12.5px;color:#8a7a90!important;text-align:center;margin-top:10px}
+.irx-vid{margin-top:18px;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.86)!important}
+.irx-vid b{color:#fff!important}
+.irx-vl{display:flex;gap:8px;margin-top:10px}
+.irx-vl a{flex:1;text-align:center;text-decoration:none;font-size:13.5px;font-weight:700;color:#fff!important;padding:11px 6px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.07)}
+.irx-ch{margin-top:16px;border-radius:24px;padding:22px 20px 20px;color:#fff!important;background:linear-gradient(160deg,#0e3352 0%,#13507f 100%);box-shadow:0 18px 40px -20px rgba(10,60,110,.7)}
+.irx-chh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.irx-ava{flex:none;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#2aabee,#7fd3ff);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#0e3352!important}
+.irx-chh b{display:block;font-size:17px;color:#fff!important}
+.irx-chh span{display:block;font-size:13px;color:rgba(255,255,255,.72)!important}
+.irx-ch p{font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.86)!important;margin:0 0 12px}
+.irx-m{display:flex;gap:12px;align-items:center;text-decoration:none;padding:12px 12px;margin-bottom:8px;border-radius:14px;background:rgba(255,255,255,.08);color:#fff!important}
+.irx-m i{flex:none;font-style:normal;font-size:20px}
+.irx-m span{flex:1;font-size:14px;line-height:1.35;font-weight:600}
+.irx-m em{flex:none;font-style:normal;color:#7fd3ff!important;font-weight:800}
+.irx-btn2{display:block;width:100%;text-align:center;text-decoration:none;font-weight:800;font-size:16px;color:#fff!important;padding:15px 14px;border-radius:16px;background:#2aabee;margin-top:12px;box-shadow:0 10px 22px -10px rgba(42,171,238,.9)}
+.irx-step{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff!important;background:linear-gradient(135deg,#ff5f8f,#7b3cff);padding:5px 10px;border-radius:999px;margin-bottom:10px}
+.irx-prod .irx-m{background:#f6eef8;color:#2b1433!important}
+.irx-prod .irx-m em{color:#b0306e!important}
+.irx-prod p{font-size:14.5px;line-height:1.5;color:#4a3550!important;margin:0 0 12px}
+.irx-vbtn{display:block;width:100%;text-align:center;text-decoration:none;font-weight:800;font-size:16px;color:#fff!important;padding:15px 14px;border-radius:16px;background:#2aabee;margin-top:6px;box-shadow:0 10px 22px -10px rgba(42,171,238,.9)}
+.irx-ch .irx-vl a{flex:1}
+</style>
+<script>
+window.IRX=(function(){
+  var CH="https://t.me/peoplenewtning";
+  var BOT="https://t.me/irinagrebenukova_bot?start=dl-1794381452984d57a53e03";
+  var VID=[["YouTube","https://youtu.be/GuTM5RX5AIw?si=u3ZIkNa3XwB6G0qH"],["ВК","https://vkvideo.ru/video-230231355_456239049?t=24s"]];
+  function go(url,e){var w=window.Telegram&&Telegram.WebApp;var t=/^https:\/\/t\.me\//.test(url);try{if(w&&w.initData){if(e)e.preventDefault();if(t&&w.openTelegramLink){w.openTelegramLink(url);return;}if(w.openLink){w.openLink(url);return;}}}catch(x){}}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function bind(root,log){
+    [].forEach.call(root.querySelectorAll(".irx-m,.irx-to-ch"),function(a){a.onclick=function(e){log("канал");go(a.href,e);};});
+    [].forEach.call(root.querySelectorAll("#irxSub,.irx-sub"),function(a){a.onclick=function(e){log("подписка");go(a.href,e);};});
+    [].forEach.call(root.querySelectorAll(".irx-v,.irx-to-vid,#irxVid"),function(a){a.onclick=function(e){log("видео");go(a.href,e);};});
+  }
+  function render(el,c){
+    if(!el)return;
+    var log=c.log||function(){};
+    var seen={},mats=[];
+    (c.mats||[]).forEach(function(m){if(m&&m.id&&!seen[m.id]&&mats.length<3){seen[m.id]=1;mats.push(m);}});
+    el.innerHTML='<div class="irx">'+
+      '<div class="irx-card">'+
+        '<div class="irx-eb">✦ Хорошая новость</div>'+
+        '<h2 class="irx-h">'+c.title+'</h2>'+
+        '<p class="irx-p">'+esc(c.lead)+'</p>'+
+        '<p class="irx-p">И вам не нужно делать всё и сразу. Вся стратегия перехода на другой уровень строится на простых шагах, и начать можно уже сегодня.</p>'+
+        '<div class="irx-q">Не будьте слепым котенком. Забирайте мою систему: как я сама меняла мышление и переходила в другую ветку реальности</div>'+
+        '<div class="irx-sign">Ирина Гребенюкова</div>'+
+        '<div class="irx-prod">'+
+          '<div class="irx-step">Шаг 1</div>'+
+          '<div class="irx-pn">Подпишитесь на канал «Новые люди»</div>'+
+          '<p>Там я каждый день выкладываю практики, разборы и подкасты. Бесплатно. Начните с этих выпусков, они как раз про ваш результат:</p>'+
+          mats.map(function(m){return '<a class="irx-m" href="'+CH+'/'+m.id+'" target="_blank" rel="noopener"><i>'+(m.i||"🎙")+'</i><span>'+esc(m.t)+'</span><em>→</em></a>';}).join("")+
+          '<a class="irx-btn" id="irxSub" href="'+CH+'" target="_blank" rel="noopener" style="margin-top:12px">Подписаться на канал →</a>'+
+          '<div class="irx-small">Откроется Telegram · бесплатно</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="irx-ch">'+
+        '<div class="irx-step">Шаг 2</div>'+
+        '<div class="irx-chh"><div class="irx-ava">▶</div><div><b>Посмотрите видео на 20 минут</b><span>как я меняла мышление и переходила в другую ветку реальности</span></div></div>'+
+        '<p>Я записала видео, которое по сути стало полной инструкцией: как переходить в другую реальность. Вам нужно всего 20 минут, и вы всё поймете. Обязательно посмотрите его сегодня, чтобы сделать свой первый прорыв 👇</p>'+
+        '<a class="irx-vbtn" id="irxVid" href="'+BOT+'" target="_blank" rel="noopener">Смотреть видео в Telegram →</a>'+
+        '<div class="irx-vl">'+VID.map(function(v){return '<a class="irx-v" href="'+v[1]+'" target="_blank" rel="noopener">'+v[0]+'</a>';}).join("")+'</div>'+
+        '<p style="margin:12px 0 0;font-size:13px">После видео в боте можно сразу попасть в практикум «Новая ветка реальности»</p>'+
+      '</div>'+
+    '</div>';
+    bind(document,log);
+  }
+  return {render:render,CH:CH,BOT:BOT};
+})();
 </script>
 
 </body></html>
